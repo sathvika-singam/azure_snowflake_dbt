@@ -1,0 +1,9 @@
+CREATE OR REPLACE FILE FORMAT csv_format
+  TYPE                      = 'CSV'
+  FIELD_DELIMITER           = ','
+  SKIP_HEADER               = 1
+  FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+  ERROR_ON_COLUMN_COUNT_MISMATCH = FALSE;
+
+-- Verify
+SHOW FILE FORMATS;
